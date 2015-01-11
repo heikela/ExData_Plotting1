@@ -16,6 +16,7 @@ plot(interesting_days[,"Global_active_power"],,
      main="",
      ylab="Global Active Power (kilowatts)",
      type="l",
-     xaxt="n")
+     xaxt="n",
+     xlab="")
 axis(1,c(0,1440,2880),labels=c("Thu","Fri","Sat"))
 dev.off()
