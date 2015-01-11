@@ -11,4 +11,11 @@ data <- read.csv("household_power_consumption.txt",
 interesting_days <- data[data[["Date"]] == "1/2/2007" | data[["Date"]] == "2/2/2007",]
 
 # plot the time series
-plot(interesting_days[,"Global_active_power"],)
+png("Plot2.png")
+plot(interesting_days[,"Global_active_power"],,
+     main="",
+     ylab="Global Active Power (kilowatts)",
+     type="l",
+     xaxt="n")
+axis(1,c(0,1440,2880),labels=c("Thu","Fri","Sat"))
+dev.off()
